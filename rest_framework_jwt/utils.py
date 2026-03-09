@@ -109,8 +109,6 @@ def jwt_decode_handler(token):
         api_settings.JWT_PUBLIC_KEY or secret_key,
         algorithms=[api_settings.JWT_ALGORITHM],
         options=options,
-        verify=True,
-        detached_payload=None,
         audience=api_settings.JWT_AUDIENCE,
         issuer=api_settings.JWT_ISSUER,
         leeway=api_settings.JWT_LEEWAY
